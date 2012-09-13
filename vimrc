@@ -71,7 +71,8 @@ fun! SetupVAM()
   endif
   exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
-">>>> PLUGINS HERE <<<<<<
+"~~~~ PLUGINS HERE ~~~~~~~~~
+"
 
   " Tell VAM which plugins to fetch & load:
   call vam#ActivateAddons([
@@ -86,6 +87,7 @@ fun! SetupVAM()
 \ 'FuzzyFinder',
 \ 'ragtag',
 \ 'YankRing',
+\ 'ack',
 \ 'AutoClose%1849',
 \ ], {'auto_install' : 0})
 
@@ -105,6 +107,14 @@ call SetupVAM()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EXTERNAL PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Ack
+"   better than grep
+  let g:AckAllFiles = 0
+  let g:AckCmd='ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
+  let g:ackprg="ack -H --nocolor --nogroup --column"
+
+  nnoremap <leader>/ :Ack ''<left>
 
 " FuzzyFinder
   let g:fuzzy_ignore = "*.log,tmp/*,db/sphinx/*,data,*.class,*.pyc"
