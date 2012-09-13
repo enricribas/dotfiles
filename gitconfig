@@ -1,0 +1,35 @@
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow 
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[user]
+	name = Enric Ribas\n
+	email = enric@ribas.com
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 903x637+335+56
+	main-window-view = HistoryView
+	file-view-vpane-position = 290
+  history-view-vpane-position = 175
+[push]
+  default = current
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log -p
