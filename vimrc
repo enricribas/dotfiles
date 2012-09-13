@@ -71,7 +71,7 @@ fun! SetupVAM()
   endif
   exec 'set runtimepath+='.vam_install_path.'/vim-addon-manager'
 
-"~~~~ PLUGINS HERE ~~~~~~~~~
+"≈≈≈≈≈≈≈≈≈ PLUGINS HERE ≈≈≈≈≈≈≈≈≈≈≈≈≈
 "
 
   " Tell VAM which plugins to fetch & load:
@@ -88,6 +88,8 @@ fun! SetupVAM()
 \ 'ragtag',
 \ 'YankRing',
 \ 'ack',
+\ 'fugitive',
+\ 'tComment',
 \ 'AutoClose%1849',
 \ ], {'auto_install' : 0})
 
@@ -107,6 +109,17 @@ call SetupVAM()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EXTERNAL PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" TComment
+"    <c-_><c-_>   :: :TComment
+"    <c-_><space> :: :TComment <QUERY COMMENT-BEGIN ?COMMENT-END>
+"    <c-_>b       :: :TCommentBlock
+"    <c-_>a       :: :TCommentAs <QUERY COMMENT TYPE>
+"    <c-_>n       :: :TCommentAs &filetype <QUERY COUNT>
+"    <c-_>s       :: :TCommentAs &filetype_<QUERY COMMENT SUBTYPE>
+"    <c-_>i       :: :TCommentInline
+"    <c-_>r       :: :TCommentRight
+"    <c-_>p       :: Comment the current inner paragraph
 
 " Ack
 "   better than grep
