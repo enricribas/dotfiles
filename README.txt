@@ -6,10 +6,9 @@ into your home directory:
 Be warned: this will overwrite any existing .vimrc, .gvimrc or .vim/ files you
 have in your home directory.
 
-If you plan on using command-t, you'll need to build the C extension. Make sure
-to use the ruby you built vim against. Here's what I ran:
 
-    cd vim/bundle/command-t/ruby/command-t
-    rvm use system
-    ruby extconf.rb
-    make
+You will need to install git and hg for (VAM) vim-addon-manager to work
+On mac: brew install hg && brew install git
+
+VAM will download and setup .vim for all addons. You may have to try multiple
+times for it to work properly.
