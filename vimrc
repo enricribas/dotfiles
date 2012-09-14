@@ -1,6 +1,7 @@
 " VIMRC of enric ribas i susany
 "
 " thanks to everyone I stole stuff from :)
+" I stand on the shoulders of giants.
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STANDARD SETTINGS
@@ -453,26 +454,35 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Better Keys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Local Leader
-  map <silent> <LocalLeader>cj :!clj %<CR>
-  map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj<CR>
-  map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal buftype=nowrite<CR>
-  map <silent> <LocalLeader>nh :nohls<CR>
-  map <silent> <LocalLeader>bd :bufdo :bd<CR>
 
-" Enter in normal mode adds newline (because I can)
+" Annoyed with pressing shift so often
+  nnoremap ; :
+
+" Diff
+  map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal buftype=nowrite<CR>
+
+" Hide the hightlighting which can get annoying
+  map <silent> <LocalLeader>nh :nohls<CR>
+
+" Enter in normal mode adds newline (because I think it makes sense)
   nnoremap <Return> A<Return><Esc>
   nnoremap <S-Return> 0O<Esc>
 
+
 " Window Movement and Control
-  nnoremap <C-h> <C-w>h
-  nnoremap <C-j> <C-w>j
-  nnoremap <C-k> <C-w>k
-  nnoremap <C-l> <C-w>l
+  " Window Switching
+    nnoremap <C-h> <C-w>h
+    nnoremap <C-j> <C-w>j
+    nnoremap <C-k> <C-w>k
+    nnoremap <C-l> <C-w>l
 
   " resize windows more simply
-  nnoremap + <C-w>+
-  nnoremap = <C-w>-
+    "  currently only for horizontal splits. TODO
+    nnoremap + <C-w>+
+    nnoremap = <C-w>-
+
+" Paste line after current line
+  nnoremap <leader>p :put<cr>
 
 " Delete word part
   nnoremap <LocalLeader>d df_
@@ -480,14 +490,11 @@ endfunction
 " Delete all console.log
   nnoremap <leader>dcl :g/.*console.log.*/d<cr>
 
-" Annoyed with pressing shift so often
-  nnoremap ; :
-
 " Scopes
   " Paragraph select
   onoremap p i(
 
-" Honestly, I forget what this does
+" Better default searching
   nnoremap / /\v
   vnoremap / /\v
 
@@ -499,10 +506,8 @@ endfunction
   nnoremap <leader>sv :source $MYVIMRC<cr>
   nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
-" move line up
+" move line up and down
   nnoremap _ ddkP
-
-" move line down
   nnoremap - ddp
 
 " White Space
@@ -511,15 +516,15 @@ endfunction
       %s/\s*$//
     endfunction
     command! -nargs=0 Trim :call Trim()
-    nnoremap <silent> <Leader>ws :Trim<CR>
+    nnoremap <silent> <Leader>ws :Trim<CR>``
 
   " Highlight trailing whitespace
     autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
     autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
     " Set up highlight group & retain through colorscheme changes
-      highlight ExtraWhitespace ctermbg=red guibg=red
-      autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+      highlight ExtraWhitespace ctermbg=blue guibg=blue
+      autocmd ColorScheme * highlight ExtraWhitespace ctermbg=blue guibg=blue
 
 " Highlight too-long lines
   autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%126v.*/
