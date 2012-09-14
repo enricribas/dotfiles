@@ -95,6 +95,8 @@ fun! SetupVAM()
 \ 'rails',
 \ 'SuperTab%1643',
 \ 'tComment',
+\ 'github:garbas/vim-snipmate',
+\ 'github:enricribas/snipmate-snippets',
 \ ], {'auto_install' : 0})
 
   " How to find addon names?
@@ -113,6 +115,27 @@ call SetupVAM()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EXTERNAL PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Snippets (SnipMate)
+"   completes common code snippets after pressing tab
+"
+  " Open corresponding snipets files
+  "   annoying but you have to change this line if you fork snipmate-snippets
+  "   TODO use variable for name of fork
+  command! SnippetsEditSelect e ~/.vim/vim-addons/github-enricribas-snipmate-snippets/snippets/
+  command! SnippetsEditRuby e ~/.vim/vim-addons/github-enricribas-snipmate-snippets/snippets/ruby.snippets
+  command! SnippetsEditJavascript e ~/.vim/vim-addons/github-enricribas-snipmate-snippets/snippets/javascript.snippets
+  command! SnippetsEditJQuery e ~/.vim/vim-addons/github-enricribas-snipmate-snippets/snippets/javascript-jquery.snippets
+  command! SnippetsEditERB e ~/.vim/vim-addons/github-enricribas-snipmate-snippets/snippets/eruby.snippets
+
+  " Mappings
+    " Pick snippet file from list
+    nnoremap <leader>ss :SnippetsEditSelect<CR>
+    " Change common snippet files for Ruby on Rails
+    nnoremap <leader>sr :SnippetsEditRuby<CR>
+    nnoremap <leader>sj :SnippetsEditJavascript<CR>
+    nnoremap <leader>sq :SnippetsEditJQuery<CR>
+    nnoremap <leader>se :SnippetsEditERB<CR>
 
 " TComment
 "    <c-_><c-_>   :: :TComment
@@ -453,6 +476,9 @@ endfunction
 
 " Delete word part
   nnoremap <LocalLeader>d df_
+
+" Delete all console.log
+  nnoremap <leader>dcl :g/.*console.log.*/d<cr>
 
 " Annoyed with pressing shift so often
   nnoremap ; :
