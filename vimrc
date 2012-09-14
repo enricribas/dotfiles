@@ -77,9 +77,11 @@ fun! SetupVAM()
   " Tell VAM which plugins to fetch & load:
   call vam#ActivateAddons([
 \ 'tlib',
-\ 'AutoClose%1849',
+\ 'delimitMate',
 \ 'Align%294',
 \ 'surround',
+\ 'checksyntax',
+\ 'quickfixsigns',
 \ 'Diablo3',
 \ 'Sass',
 \ 'Command-T',
@@ -220,7 +222,7 @@ call SetupVAM()
 
 " Gundo
 "   undo tree
-  nnoremap <F5> :GundoToggle<CR>
+  nnoremap <F4> :GundoToggle<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
