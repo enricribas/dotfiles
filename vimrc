@@ -77,6 +77,7 @@ fun! SetupVAM()
   " Tell VAM which plugins to fetch & load:
   call vam#ActivateAddons([
 \ 'tlib',
+\ 'AutoClose%1849',
 \ 'Align%294',
 \ 'surround',
 \ 'Diablo3',
@@ -89,9 +90,9 @@ fun! SetupVAM()
 \ 'YankRing',
 \ 'ack',
 \ 'fugitive',
+\ 'rails',
 \ 'SuperTab%1643',
 \ 'tComment',
-\ 'AutoClose%1849',
 \ ], {'auto_install' : 0})
 
   " How to find addon names?
