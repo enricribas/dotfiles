@@ -89,6 +89,7 @@ fun! SetupVAM()
 \ 'YankRing',
 \ 'ack',
 \ 'fugitive',
+\ 'SuperTab%1643',
 \ 'tComment',
 \ 'AutoClose%1849',
 \ ], {'auto_install' : 0})
@@ -284,23 +285,6 @@ call SetupVAM()
   set ruler
   set nowrap
   set dir=/tmp//
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MULTIPURPOSE TAB KEY
-" Indent if we're at the beginning of a line. Else, do completion.
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-
-" TODO Why doesn't this work until I run it again after load?
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OTHER SETTINGS
