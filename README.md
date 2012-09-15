@@ -1,6 +1,6 @@
-** VIM for RAILS
+# VIM for RAILS
 
-* What are you talking about?
+### What are you talking about?
 
 I used to use TextMate, which was great, but then I moved to Sublime which was
 awesome, and then I heard about VIM. At first, I thought anyone using VIM was
@@ -13,16 +13,23 @@ So I created this, so anyone new could quickly get up and running with VIM
 
 Disclaimer: I've done very little work except for setting up this repo. I did not create any of the wonderful plugins, VAM, or anything else related. I simply did a lot of research to find all the best plugins. 
 
-* How?
+### How?
 
 1. Clone this repo
-2. Run `ruby activate.rb`
+2. Run 
+
+```ruby 
+ruby activate.rb
+```
 
 Be warned: this will overwrite any existing .vimrc, .gvimrc or .vim/ files you
 have in your home directory.
 
 3. Install dependencies, like git and hg for VAM (vim-addons-manager)
-4. run `vim`
+4. Run 
+```
+vim
+```
 
 VAM will download and setup .vim for all addons. You may have to try multiple
 times for it to work properly. If you get stuck, press arrow-up. Weird. I
