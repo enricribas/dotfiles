@@ -472,6 +472,9 @@ endfunction
 
 " Annoyed with pressing shift so often
   nnoremap ; :
+  " Unfortunately this is a bad idea which breaks everything
+  " nnoremap : ;
+  nnoremap <c-f> ;
 
 " Diff
   map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal buftype=nowrite<CR>
