@@ -152,6 +152,7 @@ call SetupVAM()
     let g:snipMate = {}
     let g:snipMate.scope_aliases = {}
     let g:snipMate.scope_aliases['javascript'] = 'javascript,javascript-jquery'
+    let g:snipMate.scope_aliases['sass'] = 'css'
 
 " TComment
 "    <c-_><c-_>   :: :TComment
