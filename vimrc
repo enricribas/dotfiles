@@ -22,6 +22,11 @@
 
   compiler ruby
 
+"     unfortunately must come before Zencoding loaded
+" ZenCoding
+"   Standard is <c-y>, (comma) but too hard to type
+  let g:user_zen_leader_key = '<c-z>'
+
 "--------------------------------------------------------------------------------
 "--------------------------------------------------------------------------------
 " VAM autoloads bundles easily by specifying name (should move to external file)
@@ -98,6 +103,7 @@ fun! SetupVAM()
 \ 'tComment',
 \ 'github:garbas/vim-snipmate',
 \ 'github:enricribas/snipmate-snippets',
+\ 'ZenCoding',
 \ ], {'auto_install' : 0})
 
   " How to find addon names?
@@ -120,6 +126,9 @@ call SetupVAM()
 " Snippets (SnipMate)
 "   completes common code snippets after pressing tab
 "
+" NOTE:
+" <c-r><tab> show a list of available snippets
+"
   " Open corresponding snipets files
   "   annoying but you have to change this line if you fork snipmate-snippets
   "   TODO use variable for name of fork
@@ -137,6 +146,12 @@ call SetupVAM()
     nnoremap <leader>sj :SnippetsEditJavascript<CR>
     nnoremap <leader>sq :SnippetsEditJQuery<CR>
     nnoremap <leader>se :SnippetsEditERB<CR>
+
+  " Filetypes
+  "   Why isn't this better by default? ughh..
+    let g:snipMate = {}
+    let g:snipMate.scope_aliases = {}
+    let g:snipMate.scope_aliases['javascript'] = 'javascript,javascript-jquery'
 
 " TComment
 "    <c-_><c-_>   :: :TComment
