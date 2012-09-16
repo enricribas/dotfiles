@@ -129,23 +129,29 @@ call SetupVAM()
 " NOTE:
 " <c-r><tab> show a list of available snippets
 "
-  " Open corresponding snipets files
-  "   annoying but you have to change this line if you fork snipmate-snippets
-  "   TODO use variable for name of fork
-  command! SnippetsEditSelect e ~/.vim/vim-addons/github-enricribas-snipmate-snippets/snippets/
-  command! SnippetsEditRuby e ~/.vim/vim-addons/github-enricribas-snipmate-snippets/snippets/ruby.snippets
-  command! SnippetsEditJavascript e ~/.vim/vim-addons/github-enricribas-snipmate-snippets/snippets/javascript.snippets
-  command! SnippetsEditJQuery e ~/.vim/vim-addons/github-enricribas-snipmate-snippets/snippets/javascript-jquery.snippets
-  command! SnippetsEditERB e ~/.vim/vim-addons/github-enricribas-snipmate-snippets/snippets/eruby.snippets
+  " Open corresponding snippets files
+
+  "   Set your github name here if you fork my snippets file
+  let username        = 'enricribas'
+
+  let snippetsCommand = 'e ~/.vim/vim-addons/github-' . username . '-snipmate-snippets/snippets/'
+
+  command! SnippetsEditBase       execute snippetsCommand
+  command! SnippetsEditRuby       execute snippetsCommand . 'ruby.snippets'
+  command! SnippetsEditJavascript execute snippetsCommand . 'javascript.snippets'
+  command! SnippetsEditJQuery     execute snippetsCommand . 'javascript-jquery.snippets'
+  command! SnippetsEditERB        execute snippetsCommand . 'eruby.snippets'
+  command! SnippetsEditCSS        execute snippetsCommand . 'css.snippets'
 
   " Mappings
     " Pick snippet file from list
-    nnoremap <leader>ss :SnippetsEditSelect<CR>
+    nnoremap <leader>ss :SnippetsEditBase<cr>
+
     " Change common snippet files for Ruby on Rails
     nnoremap <leader>sr :SnippetsEditRuby<CR>
     nnoremap <leader>sj :SnippetsEditJavascript<CR>
     nnoremap <leader>sq :SnippetsEditJQuery<CR>
-    nnoremap <leader>se :SnippetsEditERB<CR>
+    nnoremap <leader>sc :SnippetsEditCSS<CR>
 
   " Filetypes
   "   Why isn't this better by default? ughh..
