@@ -109,10 +109,7 @@ fun! SetupVAM()
   " How to find addon names?
   " - look up source from pool
   " - (<c-x><c-p> complete plugin names):
-  " You can use name rewritings to point to sources:
-  "    ..ActivateAddons(["github:foo", .. => github://foo/vim-addon-foo
-  "    ..ActivateAddons(["github:user/repo", .. => github://user/repo
-  " Also see section "2.2. names of addons and addon sources" in VAM's documentation
+
 endfun
 
 call SetupVAM()
@@ -376,12 +373,6 @@ augroup vimrcEx
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
 
-  " Indent p tags
-  autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
-
-  " Don't syntax highlight markdown because it's often wrong
-  autocmd! FileType mkd setlocal syn=off
-
   " Leave the return key alone when in command line windows, since it's used
   " to run commands there.
   autocmd! CmdwinEnter * :unmap <cr>
@@ -518,6 +509,11 @@ endfunction
 " Scopes
   " Paragraph select
   onoremap p i(
+
+" Replace current word in entire document (no confirm)
+  nnoremap <expr> <leader>8 ':%s/'.expand('<cword>').'/'.input('New Word:').'/g<cr>'
+" Replace current word in entire document (no confirm)
+  nnoremap <expr> <leader>* ':%s/'.expand('<cword>').'/'.input('New Word:').'/gc<cr>'
 
 " Better default searching
   nnoremap / /\v
