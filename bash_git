@@ -1,6 +1,6 @@
-source /usr/local/etc/bash_completion.d/git-flow-completion.bash
-source /usr/local/etc/bash_completion.d/git-completion.bash
-source /usr/local/etc/bash_completion.d/git-prompt.sh
+source .git-flow-completion.bash
+source .git-completion.bash
+source .git-prompt.sh
 
 # colors
 export CLICOLOR=1
