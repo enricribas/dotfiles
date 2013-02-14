@@ -7,6 +7,7 @@ alias snip='cd ~/.vim/vim-addons/github-enricribas-snipmate-snippets/'
 alias did='idonethis'
 alias ali='vi ~/.bash_aliases'
 alias reload='. ~/.bashrc'
+alias inf='cd ~/Code/influitive-app'
 
 #postgres
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -45,7 +46,7 @@ alias pr='hub pull-request -b development -h influitive/influitive-app:'
 alias taild='tail -f log/development.log'
 alias tailt='tail -f log/test.log'
 alias rk='bundle exec rake'
-alias rs='bundle exec rspec'
+alias rs='bundle exec rspec -f d'
 alias rsa='bundle exec rspec spec --tag ~slow --tag ~type:feature'
 alias rsai='bundle exec rspec spec'
 
@@ -72,3 +73,6 @@ alias redo='bundle exec rake apartment:migrate:redo'
 alias r="bundle exec rails"
 alias be="bundle exec "
 
+# emasc
+alias e='emacsclient -t'
+alias ec='emacsclient --no-wait -c'

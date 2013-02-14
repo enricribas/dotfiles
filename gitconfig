@@ -16,8 +16,8 @@
   changed = green
   untracked = cyan
 [user]
-  name = Brad Robertson
-  email = brad@influitive.com
+  name = Anonymous Developer
+  email = dev@influitive.com
   affiliation = Influitive
 [push]
   default = current
@@ -28,3 +28,5 @@
   co = checkout
   df = diff
   lg = log -p
+[merge]
+	tool = opendiff

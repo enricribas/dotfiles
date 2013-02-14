@@ -30,4 +30,4 @@ branch_color ()
 }
 
 GIT_PS1_SHOWDIRTYSTATE=1
-PS1='\W:\[$(branch_color)\]$(__git_ps1 "(%s)")\[${c_sgr0}\]\$ '
+PS1='\n\W:\[$(branch_color)\]$(__git_ps1 "(%s)")\[${c_sgr0}\]\n\$ '
