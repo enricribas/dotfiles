@@ -15,7 +15,7 @@ dot_files.each do |filename|
   sym_link = File.join(home_dir,".#{File.basename(filename)}")
 
   # Make a backup if the file already exists
-  FileUtils.cp sym_link, "#{sym_link}.bk#{datetime}" if File.exists?(sym_link)
+  FileUtils.cp sym_link, "#{sym_link}.bk#{datetime}" if File.exists?(sym_link) && !File.symlink?(sym_link)
 
   # Removes a sym link or file if already exists
   FileUtils.rm sym_link if File.symlink?(sym_link) || File.exist?(sym_link)
