@@ -8,6 +8,8 @@ alias did='idonethis'
 alias ali='vi ~/.bash_aliases'
 alias reload='. ~/.bashrc'
 alias inf='cd ~/Code/influitive-app'
+alias gpr='hub pull-request -b influitive/influitive-app:development -h influitive/influitive-app:'
+alias dqa='./script/deploy qa development'
 
 #postgres
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -27,7 +29,8 @@ alias dev="git checkout development"
 alias gb="git branch -v"
 alias gs="git status --short"
 alias gd='git diff'
-alias ga="git add . "
+alias ga="git add "
+alias gaa="git add . "
 alias gu="git reset HEAD "
 alias gp='rspec spec && git push origin development'
 alias gpl='git pull origin development'
