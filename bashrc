@@ -12,12 +12,16 @@ export GIT_EDITOR=vim
 
 source $HOME/.hitch_export_authors
 
-# Add the following to your ~/.bashrc or ~/.zshrc
+# Used by hitch gem to pair program commit
 hitch() {
   command hitch "$@"
   if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
 }
 alias unhitch='hitch -u'
-# Uncomment to persist pair info between terminal instances
-# hitch
+hitch
+
+export HISTCONTROL=ignoredups
+
+# Use VI mode in command line bash
+set -o vi
 
