@@ -52,6 +52,7 @@ alias rk='bundle exec rake'
 alias rs='bundle exec rspec -f d'
 alias rsa='bundle exec rspec spec --tag ~slow --tag ~type:feature'
 alias rsai='bundle exec rspec spec'
+alias zrs='zeus rspec -f d '
 
 # project related
 
