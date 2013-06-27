@@ -12,6 +12,8 @@ alias did='idonethis'
 alias ali='vi ~/.bash_aliases'
 alias reload='. ~/.bashrc'
 alias inf='cd ~/Code/influitive-app'
+alias gpr='hub pull-request -b influitive/influitive-app:development -h influitive/influitive-app:'
+alias dqa='./script/deploy qa development'
 
 #postgres
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -33,8 +35,11 @@ alias dev="git checkout development"
 alias gb="git branch -v"
 alias gs="git status --short"
 alias gd='git diff'
+<<<<<<< HEAD
 alias gdc='git diff --cached'
 alias gah="git add --patch"
+=======
+>>>>>>> 9cfa2264706f31916a0296333a96499b4e04afd4
 alias ga="git add "
 alias gaa="git add . "
 alias gu="git reset HEAD "
@@ -54,8 +59,12 @@ alias rk='bundle exec rake'
 alias rs='bundle exec rspec -f d'
 alias rsa='bundle exec rspec spec --tag ~slow --tag ~type:feature'
 alias rsai='bundle exec rspec spec'
+<<<<<<< HEAD
 alias pc='heroku run console -ainfluitive-prod'
 alias nc='heroku run console -ainfluitive-narciservice-prod'
+=======
+alias zrs='zeus rspec -f d '
+>>>>>>> 9cfa2264706f31916a0296333a96499b4e04afd4
 
 # project related
 

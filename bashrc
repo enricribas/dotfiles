@@ -12,4 +12,8 @@ export GIT_EDITOR=vim
 
 source $HOME/.hitch_export_authors
 
+export HISTCONTROL=ignoredups
+
+# Use VI mode in command line bash
+set -o vi
 
