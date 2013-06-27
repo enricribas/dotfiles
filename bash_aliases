@@ -1,5 +1,9 @@
 # ALIASES
 
+# temporary commands
+
+alias ec2='ssh -i ribas-enric-stanford-week1.pem ubuntu@ec2-50-19-142-125.compute-1.amazonaws.com'
+
 #general commands
 alias rr='bundle exec rake routes | grep'
 alias dotfiles='cd ~/dotfiles'
@@ -12,6 +16,7 @@ alias inf='cd ~/Code/influitive-app'
 #postgres
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop'
+alias postgres_push_leapfroggy='heroku pg:transfer --to HEROKU_POSTGRESQL_ORANGE_URL --from postgres://enric@localhost/leapfroggy_development'
 
 #mysql
 alias mysql_start='mysql.server start'
@@ -21,22 +26,22 @@ alias mysql_stop='mysql.server stop'
 alias irbs="irb --simple-prompt"
 
 #git commands
+alias gca='git commit -a --amend --no-edit'
 alias gc="git commit -m "
 alias gco="git checkout "
 alias dev="git checkout development"
 alias gb="git branch -v"
 alias gs="git status --short"
 alias gd='git diff'
-alias ga="git add . "
+alias gdc='git diff --cached'
+alias gah="git add --patch"
+alias ga="git add "
+alias gaa="git add . "
 alias gu="git reset HEAD "
-alias gp='rspec spec && git push origin development'
-alias gpl='git pull origin development'
-alias gm='git merge development'
 alias gff="git flow feature"
 alias gpd="git push origin development"
 alias glg='git log --color --decorate --oneline --graph'
 alias git_reset_my_branch='git reset --hard HEAD'
-alias push='git pull origin && bundle exec rake spec && git push origin'
 alias git_make_alias='git config alias.'
 alias gmt='git mergetool -y'
 alias gm='git merge'
@@ -49,6 +54,8 @@ alias rk='bundle exec rake'
 alias rs='bundle exec rspec -f d'
 alias rsa='bundle exec rspec spec --tag ~slow --tag ~type:feature'
 alias rsai='bundle exec rspec spec'
+alias pc='heroku run console -ainfluitive-prod'
+alias nc='heroku run console -ainfluitive-narciservice-prod'
 
 # project related
 
