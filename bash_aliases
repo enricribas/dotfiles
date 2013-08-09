@@ -35,13 +35,10 @@ alias dev="git checkout development"
 alias gb="git branch -v"
 alias gs="git status --short"
 alias gd='git diff'
-<<<<<<< HEAD
 alias gdc='git diff --cached'
 alias gah="git add --patch"
-=======
->>>>>>> 9cfa2264706f31916a0296333a96499b4e04afd4
 alias ga="git add "
-alias gaa="git add . "
+alias gaa="git add . --all "
 alias gu="git reset HEAD "
 alias gff="git flow feature"
 alias gpd="git push origin development"
@@ -59,12 +56,9 @@ alias rk='bundle exec rake'
 alias rs='bundle exec rspec -f d'
 alias rsa='bundle exec rspec spec --tag ~slow --tag ~type:feature'
 alias rsai='bundle exec rspec spec'
-<<<<<<< HEAD
 alias pc='heroku run console -ainfluitive-prod'
 alias nc='heroku run console -ainfluitive-narciservice-prod'
-=======
 alias zrs='zeus rspec -f d '
->>>>>>> 9cfa2264706f31916a0296333a96499b4e04afd4
 
 # project related
 
