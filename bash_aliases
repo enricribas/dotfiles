@@ -20,6 +20,9 @@ alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/ser
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop'
 alias postgres_push_leapfroggy='heroku pg:transfer --to HEROKU_POSTGRESQL_ORANGE_URL --from postgres://enric@localhost/leapfroggy_development'
 
+#sublime
+alias sublime_folder='cd /Users/dev/Library/Application\ Support/Sublime\ Text\ 2\Packages'
+
 #mysql
 alias mysql_start='mysql.server start'
 alias mysql_stop='mysql.server stop'
