@@ -38,6 +38,7 @@ alias gm='git merge development'
 alias gff="git flow feature"
 alias gpd="git push origin development"
 alias glg='git log --color --decorate --oneline --graph'
+alias pull='git pull --rebase && bundle && migrate'
 alias git_reset_my_branch='git reset --hard HEAD'
 alias push='git pull origin && bundle exec rake spec && git push origin'
 alias git_make_alias='git config alias.'
