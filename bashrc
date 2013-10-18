@@ -15,5 +15,6 @@ source $HOME/.hitch_export_authors
 export HISTCONTROL=ignoredups
 
 # Use VI mode in command line bash
-set -o vi
+# set -o vi
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
