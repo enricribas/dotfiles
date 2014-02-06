@@ -1,4 +1,5 @@
 export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 # Path to the bash it configuration
 export BASH_IT="/Users/influitivedev/.bash_it"
@@ -13,3 +14,4 @@ export BUNDLER_EDITOR=subl
 export EDITOR=vim
 
 source ~/.profile
+eval "$(rbenv init -)"
