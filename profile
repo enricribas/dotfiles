@@ -24,3 +24,7 @@ export LANGUAGE="en_CA:en"
 export LC_MESSAGES="en_CA.UTF-8"
 export LC_CTYPE="en_CA.UTF-8"
 export LC_COLLATE="en_CA.UTF-8"
+
+source ~/.bash_aliases
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
