@@ -1,7 +1,9 @@
 [color]
-  branch = auto
-  diff = auto
-  status = auto
+	branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
+	ui = auto
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -16,9 +18,10 @@
   changed = green
   untracked = cyan
 [user]
-  name = Anonymous Developer
-  email = dev@influitive.com
   affiliation = Influitive
+	name = Enric Ribas and Victor Stan
+	initials = er vs
+	email = pair+enric+victor@influitive.com
 [push]
   default = current
 [alias]
@@ -28,5 +31,38 @@
   co = checkout
   df = diff
   lg = log -p
+	di = diff
+	sta = stash
+	llog = log --date=local
+	flog = log --pretty=fuller --decorate
+	lol = log --graph --decorate --oneline
+	lola = log --graph --decorate --oneline --all
+	blog = log origin/master... --left-right
+	ds = diff --staged
+	fixup = commit --fixup
+	squash = commit --squash
+	unstage = reset HEAD
+	rum = rebase
 [merge]
 	tool = opendiff
+[core]
+	excludesfile = /Users/influitivedev/.gitignore_global
+	pager = less -FXRS -x2
+[apply]
+	whitespace = nowarn
+[branch]
+	autosetupmerge = true
+[rebase]
+	autosquash = true
+[git-pair]
+	authors = Alex
+	authors = Brad
+	email = dev@influitive.com
+	authors = Alex Aitken
+	authors = Brad Robertson
+	authors = Kevin McNee
+	authors = Brad Robertson
+	authors = Alex Aitken
+	authors = Marius Butuc
+	authors = Leon Lukashevsky
+	authors = Matt Stobo

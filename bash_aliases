@@ -2,7 +2,7 @@
 
 # temporary commands
 
-alias ec2='ssh -i ribas-enric-stanford-week1.pem ubuntu@ec2-50-19-142-125.compute-1.amazonaws.com'
+alias reverseproxyssh='ssh -l ubuntu -i ~/Code/ReverseProxyServer.pem ec2-107-22-222-4.compute-1.amazonaws.com'
 
 #general commands
 alias rr='bundle exec rake routes | grep'

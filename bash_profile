@@ -1,8 +1,17 @@
-source ~/.bashrc
+export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
 
+# Path to the bash it configuration
+export BASH_IT="/Users/influitivedev/.bash_it"
 
+# Lock and Load a custom theme file
+export BASH_IT_THEME="bobby"
 
-# This shouldn't be needed but can't seem to set system default without it
-rvm reload
+# Load Bash It
+source $BASH_IT/bash_it.sh
 
+export BUNDLER_EDITOR=subl
+export EDITOR=vim
 
+source ~/.profile
+eval "$(rbenv init -)"
